@@ -13,6 +13,14 @@ def load_data():
 # Load Data
 suppliers, projects = load_data()
 
+# Calculate overall supplier score
+suppliers["Supplier_Score"] = (
+    suppliers["Delivery_Reliability"] * 0.35 +
+    suppliers["Cost_Consistency"] * 0.25 +
+    suppliers["Quality_Score"] * 0.25 +
+    suppliers["Responsiveness_Score"] * 0.15
+).round(1)
+
 # Streamlit Layout
 st.title("Analytics and Operational Insights Dashboard")
 
