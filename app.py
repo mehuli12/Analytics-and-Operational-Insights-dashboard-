@@ -155,5 +155,77 @@ elif selected_tab == "Supplier Intelligence":
     ]
 
     st.dataframe(risky_suppliers, use_container_width=True)
+
+
+# Operational Risk Insights
+elif selected_tab == "Operational Risk Insights":
+    st.subheader("Operational Risk Insights")
+
+    st.write(
+        "This section identifies projects that need management attention by combining "
+        "delay days, open issues, completion progress, and operational severity signals."
+    )
+
+    high_risk_projects = projects.sort_values(by="Risk_Score", ascending=False)
+
+    st.subheader("Highest Risk Projects")
+    st.dataframe(
+        high_risk_projects[
+            [
+                "Project_ID",
+                "Project_Name",
+                "Status",
+                "Completion_Percentage",
+                "Delay_Days",
+                "Open_Issues",
+                "Risk_Score",
+            ]
+        ],
+        use_container_width=True,
+    )
+
+    st.subheader("Risk Score by Project")
+    fig = px.bar(
+        high_risk_projects,
+        x="Project_Name",
+        y="Risk_Score",
+        color="Status",
+        title="Project Risk Score"
+    )
+    st.plotly_chart(fig, use_container_width=True)
+
+    st.subheader("Issue Category Breakdown")
+    issue_category_counts = issues["Issue_Category"].value_counts().reset_index()
+    issue_category_counts.columns = ["Issue_Category", "Count"]
+
+    fig = px.bar(
+        issue_category_counts,
+        x="Issue_Category",
+        y="Count",
+        title="Most Common Operational Issue Categories"
+    )
+    st.plotly_chart(fig, use_container_width=True)
+
+    st.subheader("Open High Severity Issues")
+    high_severity_issues = issues[
+        (issues["Severity"] == "High") & (issues["Status"] == "Open")
+    ].sort_values(by="Days_Open", ascending=False)
+
+    st.dataframe(high_severity_issues, use_container_width=True)
+
+    st.subheader("Operational Alerts")
+
+    critical_projects = high_risk_projects[high_risk_projects["Risk_Score"] >= 70]
+
+    if len(critical_projects) == 0:
+        st.success("No critical project risks detected.")
+    else:
+        for _, row in critical_projects.iterrows():
+            st.warning(
+                f"{row['Project_Name']} requires attention. "
+                f"Risk Score: {row['Risk_Score']:.0f}/100. "
+                f"Delay: {row['Delay_Days']} days. "
+                f"Open Issues: {int(row['Open_Issues'])}."
+            )
     
 # Run this app locally using: streamlit run app.py
