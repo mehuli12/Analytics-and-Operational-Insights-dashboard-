@@ -22,7 +22,7 @@ suppliers["Supplier_Score"] = (
 ).round(1)
 
 # Streamlit Layout
-st.title("Analytics and Operational Insights Dashboard")
+st.title("Operational Intelligence Dashboard")
 
 # Tabs for Different Sections
 st.sidebar.title("Navigation")
