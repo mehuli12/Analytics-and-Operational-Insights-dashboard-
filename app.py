@@ -227,5 +227,107 @@ elif selected_tab == "Operational Risk Insights":
                 f"Delay: {row['Delay_Days']} days. "
                 f"Open Issues: {int(row['Open_Issues'])}."
             )
-    
+
+
+
+
+# Data Story
+elif selected_tab == "Data Story":
+
+    st.title("Operational Intelligence Dashboard")
+
+    st.header("Business Problem")
+
+    st.write("""
+    Operations teams often manage dozens of projects, suppliers, budgets,
+    and operational issues simultaneously. As projects scale, it becomes
+    increasingly difficult to identify which risks require immediate
+    intervention and which suppliers are contributing to delivery delays.
+
+    This dashboard was designed to provide a centralized view of project
+    health, supplier performance, and operational risk so that decision
+    makers can prioritize actions and allocate resources effectively.
+    """)
+
+    st.header("Dataset")
+
+    st.write("""
+    This project uses simulated infrastructure operations data inspired by
+    real-world project management, supplier evaluation, procurement, and
+    operational reporting scenarios.
+
+    No confidential company data has been used.
+
+    The dataset contains:
+
+    • Projects
+    • Suppliers
+    • Operational Issues
+    • Risk Indicators
+    """)
+
+    st.header("Supplier Scoring Methodology")
+
+    st.write("""
+    Suppliers are evaluated using four operational metrics:
+
+    • Delivery Reliability
+    • Cost Consistency
+    • Quality Score
+    • Responsiveness Score
+
+    Overall Supplier Score =
+    35% Delivery Reliability +
+    25% Cost Consistency +
+    25% Quality +
+    15% Responsiveness
+
+    Suppliers are then categorized as:
+
+    • Recommended
+    • Monitor
+    • High Risk
+    """)
+
+    st.header("Project Risk Methodology")
+
+    st.write("""
+    Project Risk Score is calculated using:
+
+    • Delay Days
+    • Number of Open Issues
+    • Completion Percentage
+
+    Higher delays, more open issues, and lower completion rates increase
+    overall project risk.
+
+    The objective is to identify projects requiring intervention before
+    delays and cost overruns become critical.
+    """)
+
+    st.header("Decisions Supported")
+
+    st.write("""
+    This dashboard supports decisions such as:
+
+    • Which projects require immediate attention?
+    • Which suppliers should be reviewed?
+    • Which operational issues are most common?
+    • Where should management resources be focused?
+    • What risks could impact delivery performance?
+    """)
+
+    st.header("Limitations")
+
+    st.write("""
+    This project uses simulated operational data and simplified scoring
+    models for demonstration purposes.
+
+    In a production environment, additional factors such as resource
+    availability, procurement lead times, financial forecasts, and
+    historical supplier performance would be incorporated into the model.
+    """)
+
+
+
 # Run this app locally using: streamlit run app.py
