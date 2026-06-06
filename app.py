@@ -23,6 +23,27 @@ suppliers["Supplier_Score"] = (
     suppliers["Responsiveness_Score"] * 0.15
 ).round(1)
 
+# Calculate project risk score
+
+issue_counts = issues.groupby("Project_ID").size().reset_index(name="Open_Issues")
+
+projects = projects.merge(
+    issue_counts,
+    on="Project_ID",
+    how="left"
+)
+
+projects["Open_Issues"] = projects["Open_Issues"].fillna(0)
+
+projects["Risk_Score"] = (
+    projects["Delay_Days"] * 1.2 +
+    projects["Open_Issues"] * 8 +
+    (100 - projects["Completion_Percentage"]) * 0.4
+).round(0)
+
+projects["Risk_Score"] = projects["Risk_Score"].clip(0, 100)
+
+
 # Streamlit Layout
 st.title("Operational Intelligence Dashboard")
 
