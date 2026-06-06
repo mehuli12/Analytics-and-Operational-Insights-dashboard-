@@ -1,4 +1,4 @@
-Supplier_ID,Supplier_Name,Category,Delivery_Reliability,Cost_Consistency,Quality_Score,Responsiveness_Score
+Supplier_ID,Supplier_Name,Category,Delivery_Reliability,Cost_Consistency,Quality_Score,Responsiveness_Score,Risk_Category
 1,Alpha Steel,Raw Materials,95,92,94,90
 2,BuildTech Systems,Technology,88,85,91,87
 3,Prime Concrete,Raw Materials,78,82,80,75
