@@ -90,14 +90,47 @@ elif selected_tab == "Project Tracking":
     fig = px.scatter(projects, x="Budget", y="Actual_Cost", color="Status", title="Budget vs Actual Cost")
     st.plotly_chart(fig)
 
-# Supplier Performance
-elif selected_tab == "Supplier Performance":
-    st.subheader("Supplier Quality Ratings")
-    fig = px.bar(suppliers, x="Supplier_Name", y="Quality_Score", color="Category", title="Supplier Quality Scores")
-    st.plotly_chart(fig)
-    
-    st.subheader("Supplier On-Time Delivery Rates")
-    fig = px.scatter(suppliers, x="Supplier_Name", y="Delivery_Reliability", color="Category", title="Supplier Delivery Reliability")
-    st.plotly_chart(fig)
+# Supplier Intelligence
+elif selected_tab == "Supplier Intelligence":
+    st.subheader("Supplier Intelligence")
+
+    st.write(
+        "This section ranks suppliers using delivery reliability, cost consistency, "
+        "quality score, and responsiveness. The goal is to identify which suppliers "
+        "are reliable, which need monitoring, and which create operational risk."
+    )
+
+    supplier_summary = suppliers[
+        [
+            "Supplier_Name",
+            "Category",
+            "Delivery_Reliability",
+            "Cost_Consistency",
+            "Quality_Score",
+            "Responsiveness_Score",
+            "Supplier_Score",
+            "Risk_Category",
+        ]
+    ].sort_values(by="Supplier_Score", ascending=False)
+
+    st.subheader("Supplier Ranking")
+    st.dataframe(supplier_summary, use_container_width=True)
+
+    st.subheader("Top Suppliers by Overall Score")
+    fig = px.bar(
+        supplier_summary,
+        x="Supplier_Name",
+        y="Supplier_Score",
+        color="Risk_Category",
+        title="Overall Supplier Score"
+    )
+    st.plotly_chart(fig, use_container_width=True)
+
+    st.subheader("Suppliers Requiring Attention")
+    risky_suppliers = supplier_summary[
+        supplier_summary["Risk_Category"].isin(["Monitor", "High Risk"])
+    ]
+
+    st.dataframe(risky_suppliers, use_container_width=True)
     
 # Run this app locally using: streamlit run app.py
