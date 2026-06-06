@@ -1,11 +1,31 @@
 Supplier_ID,Supplier_Name,Category,Delivery_Reliability,Cost_Consistency,Quality_Score,Responsiveness_Score,Risk_Category
-1,Alpha Steel,Raw Materials,95,92,94,90,Recommended
-2,BuildTech Systems,Technology,88,85,91,87,Recommended
-3,Prime Concrete,Raw Materials,78,82,80,75,Monitor
-4,Urban Machinery,Machinery,92,89,90,88,Recommended
-5,Skyline Services,Services,84,86,83,90,Monitor
-6,Metro Equipments,Machinery,70,75,72,68,High Risk
-7,Vertex Solutions,Technology,96,94,95,97,Recommended
-8,Elite Contractors,Services,80,78,82,79,Monitor
-9,Foundation Supply,Raw Materials,90,88,89,86,Recommended
-10,Titan Infrastructure,Machinery,65,70,68,72,High Risk
+1,Urban Machinery 1,Raw Materials,98,93,79,67,Recommended
+2,Foundation Supply 2,Machinery,80,83,87,70,Monitor
+3,Elite Contractors 3,Machinery,70,88,88,62,Monitor
+4,Urban Machinery 4,Raw Materials,81,66,88,89,Monitor
+5,Atlas Machinery 5,Technology,97,66,85,92,Recommended
+6,BuildTech Systems 6,Raw Materials,71,86,89,86,Monitor
+7,Prime Concrete 7,Machinery,87,80,79,62,Monitor
+8,Elite Contractors 8,Raw Materials,96,71,85,68,Monitor
+9,NextGen Systems 9,Machinery,98,82,68,84,Monitor
+10,NextGen Systems 10,Technology,73,73,90,61,Monitor
+11,Elite Contractors 11,Technology,79,92,71,67,Monitor
+12,Atlas Machinery 12,Services,94,78,81,95,Recommended
+13,Alpha Steel 13,Machinery,63,66,70,63,High Risk
+14,BlueLine Logistics 14,Services,88,82,90,93,Recommended
+15,Foundation Supply 15,Machinery,69,78,95,74,Monitor
+16,Vertex Solutions 16,Services,67,78,87,80,Monitor
+17,Urban Machinery 17,Raw Materials,75,82,88,85,Monitor
+18,Apex Engineering 18,Raw Materials,84,93,79,60,Monitor
+19,Core Materials 19,Services,84,71,73,83,Monitor
+20,Sterling Services 20,Services,60,72,88,70,High Risk
+21,BuildTech Systems 21,Technology,76,72,97,64,Monitor
+22,NextGen Systems 22,Raw Materials,98,92,71,68,Recommended
+23,Apex Engineering 23,Raw Materials,67,76,98,92,Monitor
+24,NextGen Systems 24,Services,82,88,86,86,Recommended
+25,Sterling Services 25,Services,94,65,78,62,Monitor
+26,Atlas Machinery 26,Machinery,60,69,90,73,High Risk
+27,Prime Concrete 27,Raw Materials,98,91,73,74,Recommended
+28,Elite Contractors 28,Services,74,90,77,91,Monitor
+29,Prime Concrete 29,Machinery,98,96,68,89,Recommended
+30,Urban Machinery 30,Technology,96,87,79,88,Recommended
