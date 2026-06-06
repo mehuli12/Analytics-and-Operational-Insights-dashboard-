@@ -3,33 +3,13 @@ import pandas as pd
 import numpy as np
 import plotly.express as px
 
-# Load Sample Data (Simulating KB Infrastructure Data)
+# Load simulated infrastructure operations data
 @st.cache_data
 def load_data():
-    num_suppliers = 50
-    suppliers = pd.DataFrame({
-        'Supplier_ID': range(1, num_suppliers + 1),
-        'Supplier_Name': [f'Supplier_{i}' for i in range(1, num_suppliers + 1)],
-        'Category': np.random.choice(['Raw Materials', 'Machinery', 'Services', 'Technology'], num_suppliers),
-        'Average_Cost': np.random.randint(5000, 50000, num_suppliers),
-        'On_Time_Delivery_Rate': np.random.uniform(80, 99, num_suppliers),
-        'Quality_Rating': np.random.uniform(3.5, 5, num_suppliers),
-        'Contract_Compliance': np.random.uniform(85, 100, num_suppliers)
-    })
-    
-    num_projects = 100
-    projects = pd.DataFrame({
-        'Project_ID': range(1, num_projects + 1),
-        'Project_Name': [f'Project_{i}' for i in range(1, num_projects + 1)],
-        'Status': np.random.choice(['Active', 'Completed', 'Delayed'], num_projects),
-        'Budget': np.random.randint(100000, 2000000, num_projects),
-        'Actual_Cost': np.random.randint(80000, 2200000, num_projects),
-        'Completion_Percentage': np.random.randint(50, 100, num_projects),
-        'Delay_Days': np.random.randint(0, 90, num_projects)
-    })
-    
+    suppliers = pd.read_csv("data/suppliers.csv")
+    projects = pd.read_csv("data/projects.csv")
     return suppliers, projects
-
+    
 # Load Data
 suppliers, projects = load_data()
 
