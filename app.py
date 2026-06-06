@@ -4,14 +4,16 @@ import numpy as np
 import plotly.express as px
 
 # Load simulated infrastructure operations data
+
 @st.cache_data
 def load_data():
     suppliers = pd.read_csv("data/suppliers.csv")
     projects = pd.read_csv("data/projects.csv")
-    return suppliers, projects
+    issues = pd.read_csv("data/issues.csv")
+    return suppliers, projects, issues
     
 # Load Data
-suppliers, projects = load_data()
+suppliers, projects, issues = load_data()
 
 # Calculate overall supplier score
 suppliers["Supplier_Score"] = (
