@@ -24,7 +24,7 @@ selected_tab = st.sidebar.radio("Select a section", tabs)
 # Financial Performance
 if selected_tab == "Financial Performance":
     st.subheader("Revenue & Expenses Overview")
-    months = pd.date_range(start='2024-01-01', periods=12, freq='M')
+    months = pd.date_range(start='2024-01-01', periods=12, freq='ME')
     financials = pd.DataFrame({
         'Month': months,
         'Revenue': np.random.randint(500000, 5000000, 12),
