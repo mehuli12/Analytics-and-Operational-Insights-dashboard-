@@ -54,5 +54,5 @@ elif selected_tab == "Supplier Performance":
     st.subheader("Supplier On-Time Delivery Rates")
     fig = px.scatter(suppliers, x="Supplier_Name", y="On_Time_Delivery_Rate", color="Category", title="Supplier On-Time Delivery Rates")
     st.plotly_chart(fig)
-
-# Run this script using: streamlit run your_script.py
+    
+# Run this app locally using: streamlit run app.py
