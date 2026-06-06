@@ -18,7 +18,13 @@ st.title("Analytics and Operational Insights Dashboard")
 
 # Tabs for Different Sections
 st.sidebar.title("Navigation")
-tabs = ["Financial Performance", "Project Tracking", "Supplier Performance"]
+tabs = [
+    "Executive Overview",
+    "Supplier Intelligence",
+    "Project Tracking",
+    "Operational Risk Insights",
+    "Data Story"
+]
 selected_tab = st.sidebar.radio("Select a section", tabs)
 
 # Financial Performance
