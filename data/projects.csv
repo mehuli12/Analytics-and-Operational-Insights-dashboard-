@@ -1,1 +1,11 @@
-
+Project_ID,Project_Name,Status,Budget,Actual_Cost,Completion_Percentage,Delay_Days,Risk_Level
+1,Riverside Tower,Active,1200000,1100000,75,5,Medium
+2,Greenfield Residences,Completed,1800000,1750000,100,0,Low
+3,Metro Commercial Hub,Delayed,1500000,1900000,65,35,High
+4,Lakeside Apartments,Active,950000,900000,80,3,Low
+5,City Business Park,Delayed,2200000,2600000,55,42,High
+6,West End Plaza,Completed,1700000,1680000,100,0,Low
+7,Innovation Centre,Active,1400000,1350000,70,8,Medium
+8,Central Heights,Delayed,1250000,1500000,60,25,High
+9,Parkview Residency,Active,1050000,1000000,85,2,Low
+10,Harbour Point,Completed,2000000,1980000,100,0,Low
