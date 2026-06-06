@@ -48,7 +48,7 @@ elif selected_tab == "Project Tracking":
 # Supplier Performance
 elif selected_tab == "Supplier Performance":
     st.subheader("Supplier Quality Ratings")
-    fig = px.bar(suppliers, x="Supplier_Name", y="Quality_Rating", color="Category", title="Supplier Quality Ratings")
+    fig = px.bar(suppliers, x="Supplier_Name", y="Quality_Score", color="Category", title="Supplier Quality Scores")
     st.plotly_chart(fig)
     
     st.subheader("Supplier On-Time Delivery Rates")
