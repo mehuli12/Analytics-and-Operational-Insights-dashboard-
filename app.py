@@ -27,18 +27,49 @@ tabs = [
 ]
 selected_tab = st.sidebar.radio("Select a section", tabs)
 
-# Financial Performance
-if selected_tab == "Financial Performance":
-    st.subheader("Revenue & Expenses Overview")
-    months = pd.date_range(start='2024-01-01', periods=12, freq='ME')
-    financials = pd.DataFrame({
-        'Month': months,
-        'Revenue': np.random.randint(500000, 5000000, 12),
-        'Expenses': np.random.randint(200000, 3000000, 12),
-        'Profit': np.random.randint(100000, 2000000, 12)
-    })
-    fig = px.line(financials, x='Month', y=['Revenue', 'Expenses', 'Profit'], title="Financial Performance Over Time")
-    st.plotly_chart(fig)
+# Executive Overview
+if selected_tab == "Executive Overview":
+    st.subheader("Executive Overview")
+
+    total_projects = len(projects)
+    active_projects = len(projects[projects["Status"] == "Active"])
+    delayed_projects = len(projects[projects["Status"] == "Delayed"])
+    avg_completion = round(projects["Completion_Percentage"].mean(), 1)
+    total_budget = projects["Budget"].sum()
+    total_actual_cost = projects["Actual_Cost"].sum()
+    budget_variance = total_actual_cost - total_budget
+
+    col1, col2, col3, col4 = st.columns(4)
+
+    col1.metric("Total Projects", total_projects)
+    col2.metric("Active Projects", active_projects)
+    col3.metric("Delayed Projects", delayed_projects)
+    col4.metric("Avg Completion", f"{avg_completion}%")
+
+    col5, col6 = st.columns(2)
+
+    col5.metric("Total Budget", f"£{total_budget:,.0f}")
+    col6.metric("Budget Variance", f"£{budget_variance:,.0f}")
+
+    st.subheader("Project Status Distribution")
+    project_status_counts = projects["Status"].value_counts()
+    fig = px.bar(
+        x=project_status_counts.index,
+        y=project_status_counts.values,
+        labels={"x": "Project Status", "y": "Number of Projects"},
+        title="Projects by Status"
+    )
+    st.plotly_chart(fig, use_container_width=True)
+
+    st.subheader("Projects Requiring Attention")
+    attention_projects = projects[
+        (projects["Status"] == "Delayed") |
+        (projects["Risk_Level"] == "High") |
+        (projects["Delay_Days"] > 20)
+    ]
+
+    st.dataframe(attention_projects, use_container_width=True)
+
 
 # Project Tracking
 elif selected_tab == "Project Tracking":
