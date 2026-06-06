@@ -1,11 +1,11 @@
 Supplier_ID,Supplier_Name,Category,Delivery_Reliability,Cost_Consistency,Quality_Score,Responsiveness_Score,Risk_Category
-1,Alpha Steel,Raw Materials,95,92,94,90
-2,BuildTech Systems,Technology,88,85,91,87
-3,Prime Concrete,Raw Materials,78,82,80,75
-4,Urban Machinery,Machinery,92,89,90,88
-5,Skyline Services,Services,84,86,83,90
-6,Metro Equipments,Machinery,70,75,72,68
-7,Vertex Solutions,Technology,96,94,95,97
-8,Elite Contractors,Services,80,78,82,79
-9,Foundation Supply,Raw Materials,90,88,89,86
-10,Titan Infrastructure,Machinery,65,70,68,72
+1,Alpha Steel,Raw Materials,95,92,94,90,Recommended
+2,BuildTech Systems,Technology,88,85,91,87,Recommended
+3,Prime Concrete,Raw Materials,78,82,80,75,Monitor
+4,Urban Machinery,Machinery,92,89,90,88,Recommended
+5,Skyline Services,Services,84,86,83,90,Monitor
+6,Metro Equipments,Machinery,70,75,72,68,High Risk
+7,Vertex Solutions,Technology,96,94,95,97,Recommended
+8,Elite Contractors,Services,80,78,82,79,Monitor
+9,Foundation Supply,Raw Materials,90,88,89,86,Recommended
+10,Titan Infrastructure,Machinery,65,70,68,72,High Risk
