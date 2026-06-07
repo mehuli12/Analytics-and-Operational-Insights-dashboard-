@@ -97,6 +97,9 @@ for i in range(1, 51):
         completion = 100
         risk = "Low"
 
+
+    primary_supplier_id = np.random.randint(1, 31)
+
     projects.append([
         i,
         f"{random.choice(project_names)} {i}",
@@ -105,12 +108,14 @@ for i in range(1, 51):
         actual_cost,
         completion,
         delay_days,
-        risk
+        risk,
+        primary_supplier_id
     ])
 
 projects_df = pd.DataFrame(projects, columns=[
     "Project_ID", "Project_Name", "Status", "Budget",
-    "Actual_Cost", "Completion_Percentage", "Delay_Days", "Risk_Level"
+    "Actual_Cost", "Completion_Percentage", "Delay_Days",
+    "Risk_Level", "Primary_Supplier_ID"
 ])
 
 # Issues
