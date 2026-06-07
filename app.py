@@ -35,13 +35,28 @@ projects = projects.merge(
 
 projects["Open_Issues"] = projects["Open_Issues"].fillna(0)
 
+# Normalize individual risk drivers to a 0-100 scale
+projects["Schedule_Risk"] = (projects["Delay_Days"] / 60 * 100).clip(0, 100)
+
+projects["Issue_Risk"] = (projects["Open_Issues"] / 10 * 100).clip(0, 100)
+
+projects["Completion_Risk"] = (100 - projects["Completion_Percentage"]).clip(0, 100)
+
+projects["Budget_Variance_Percent"] = (
+    (projects["Actual_Cost"] - projects["Budget"]) / projects["Budget"] * 100
+).round(1)
+
+projects["Cost_Risk"] = (projects["Budget_Variance_Percent"] / 30 * 100).clip(0, 100)
+
+# Weighted project risk score
 projects["Risk_Score"] = (
-    projects["Delay_Days"] * 1.2 +
-    projects["Open_Issues"] * 8 +
-    (100 - projects["Completion_Percentage"]) * 0.4
+    projects["Schedule_Risk"] * 0.40 +
+    projects["Issue_Risk"] * 0.30 +
+    projects["Completion_Risk"] * 0.20 +
+    projects["Cost_Risk"] * 0.10
 ).round(0)
 
-projects["Risk_Score"] = projects["Risk_Score"].clip(0, 100)
+
 
 
 # Streamlit Layout
