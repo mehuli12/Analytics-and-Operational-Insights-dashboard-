@@ -1,51 +1,51 @@
-Project_ID,Project_Name,Status,Budget,Actual_Cost,Completion_Percentage,Delay_Days,Risk_Level
-1,West End Plaza 1,Active,1713475,1941120,66,6,Medium
-2,Parkview Residency 2,Active,3012667,3401027,50,12,Low
-3,Metro Commercial Hub 3,Completed,2561083,2588574,100,3,Low
-4,West End Plaza 4,Completed,2623091,2697880,100,2,Low
-5,Central Heights 5,Completed,1042335,1054309,100,3,Low
-6,Parkview Residency 6,Active,3165702,3552071,71,0,Medium
-7,Horizon Estate 7,Delayed,2003165,2103635,78,17,High
-8,Greenfield Residences 8,Active,3048421,3058249,81,8,Medium
-9,Northgate Offices 9,Active,728576,645488,68,11,Low
-10,Innovation Centre 10,Active,2762990,2488037,85,23,Low
-11,Regent Commercial Centre 11,Delayed,2715603,3147625,51,72,High
-12,Northgate Offices 12,Delayed,565318,677914,56,70,High
-13,Kingston Heights 13,Active,1270746,1312514,72,1,Medium
-14,Canary Works 14,Delayed,3495765,3705214,58,15,High
-15,Central Heights 15,Active,677789,605583,70,11,Low
-16,Horizon Estate 16,Completed,1783743,1713425,100,6,Low
-17,Regent Commercial Centre 17,Active,1619043,1415458,61,23,Medium
-18,City Business Park 18,Active,3408926,3718940,78,4,Low
-19,Metro Commercial Hub 19,Completed,2161909,2069281,100,7,Low
-20,Lakeside Apartments 20,Delayed,2619823,3407317,45,73,High
-21,Urban Logistics Hub 21,Active,2648815,2283894,80,19,Low
-22,Kingston Heights 22,Completed,1410681,1343558,100,2,Low
-23,Camden Square 23,Active,642483,670464,85,19,Medium
-24,Lakeside Apartments 24,Active,2682048,2599632,62,6,Low
-25,Horizon Estate 25,Completed,1556731,1552128,100,1,Low
-26,Northgate Offices 26,Delayed,2356926,3095119,55,21,High
-27,West End Plaza 27,Active,2704664,2718162,46,16,Medium
-28,Parkview Residency 28,Completed,1186976,1031031,100,3,Low
-29,West End Plaza 29,Delayed,3404516,4494388,80,23,High
-30,Lakeside Apartments 30,Completed,2977154,2947595,100,7,Low
-31,Harbour Point 31,Delayed,3188130,4166558,72,68,High
-32,Camden Square 32,Delayed,2347191,3063738,75,86,High
-33,City Business Park 33,Completed,1001157,984935,100,5,Low
-34,Horizon Estate 34,Active,2252290,2165993,79,24,Low
-35,Camden Square 35,Delayed,633272,665897,74,80,High
-36,Oakwood Residences 36,Delayed,3051503,4114455,43,47,High
-37,Lakeside Apartments 37,Active,1377844,1245084,52,23,Low
-38,Harbour Point 38,Delayed,3036582,3845169,51,47,High
-39,Regent Commercial Centre 39,Active,607450,583343,66,22,Low
-40,Metro Commercial Hub 40,Delayed,616381,827123,47,65,High
-41,Metro Commercial Hub 41,Completed,1699386,1592118,100,4,Low
-42,Horizon Estate 42,Delayed,3437629,4274798,72,78,High
-43,City Business Park 43,Delayed,3476763,4404139,43,33,High
-44,Horizon Estate 44,Completed,3227423,2857631,100,3,Low
-45,Innovation Centre 45,Active,1436093,1631658,50,20,Medium
-46,Innovation Centre 46,Delayed,678274,864335,63,51,High
-47,Kingston Heights 47,Completed,3387004,3169005,100,4,Low
-48,Southbank Retail Park 48,Delayed,615294,823931,60,77,High
-49,Lakeside Apartments 49,Active,2567359,2837807,62,2,Medium
-50,Northgate Offices 50,Active,1189944,1152350,47,21,Low
+Project_ID,Project_Name,Status,Budget,Actual_Cost,Completion_Percentage,Delay_Days,Risk_Level,Primary_Supplier_ID
+1,West End Plaza 1,Active,1713475,1941120,66,6,Medium,28
+2,Parkview Residency 2,Active,543585,563864,50,24,Low,28
+3,Metro Commercial Hub 3,Completed,3364747,2985587,100,5,Low,30
+4,West End Plaza 4,Completed,1701482,1556633,100,6,Low,28
+5,Central Heights 5,Completed,3165702,3264996,100,0,Low,25
+6,Parkview Residency 6,Active,1484346,1451886,57,19,Medium,9
+7,Horizon Estate 7,Delayed,902690,949707,66,86,High,9
+8,Greenfield Residences 8,Active,2454109,2249515,86,18,Medium,12
+9,Northgate Offices 9,Active,2762990,2488037,85,23,Low,20
+10,Innovation Centre 10,Active,1996176,1735610,56,19,Low,30
+11,Regent Commercial Centre 11,Delayed,565318,677914,56,70,High,27
+12,Northgate Offices 12,Delayed,1313168,1763564,62,68,High,5
+13,Kingston Heights 13,Active,1980415,2222975,46,18,Medium,21
+14,Canary Works 14,Delayed,1337291,1583800,71,84,High,23
+15,Central Heights 15,Active,1619043,1415458,61,23,Low,6
+16,Horizon Estate 16,Completed,3058231,2887153,100,1,Low,6
+17,Regent Commercial Centre 17,Active,2161909,2185111,60,15,Medium,1
+18,City Business Park 18,Active,1904104,1801727,60,5,Low,29
+19,Metro Commercial Hub 19,Completed,811955,743094,100,3,Low,19
+20,Lakeside Apartments 20,Delayed,1410681,1697935,59,33,High,7
+21,Urban Logistics Hub 21,Active,2811987,3183610,83,7,Low,18
+22,Kingston Heights 22,Completed,1556731,1552128,100,1,Low,23
+23,Camden Square 23,Active,2356926,2623734,51,2,Medium,28
+24,Lakeside Apartments 24,Active,1145263,1254253,93,24,Low,2
+25,Horizon Estate 25,Completed,1186976,1031031,100,3,Low,5
+26,Northgate Offices 26,Delayed,617796,812272,80,23,High,3
+27,West End Plaza 27,Active,1198002,1279210,64,2,Medium,24
+28,Parkview Residency 28,Completed,1407317,1415725,100,7,Low,20
+29,West End Plaza 29,Delayed,1168234,1554557,77,50,High,8
+30,Lakeside Apartments 30,Completed,3113501,2652202,100,5,Low,25
+31,Harbour Point 31,Delayed,2285954,3067976,57,32,High,2
+32,Camden Square 32,Delayed,2600021,3079795,80,75,High,4
+33,City Business Park 33,Completed,1638848,1398945,100,5,Low,21
+34,Horizon Estate 34,Active,980047,1052518,51,7,Low,3
+35,Camden Square 35,Delayed,2159280,2466800,51,62,High,27
+36,Oakwood Residences 36,Delayed,2769042,3436103,69,36,High,6
+37,Lakeside Apartments 37,Active,2120197,2052200,52,21,Low,27
+38,Harbour Point 38,Delayed,2514484,3019370,72,42,High,5
+39,Regent Commercial Centre 39,Active,3476763,3708786,48,18,Low,3
+40,Metro Commercial Hub 40,Delayed,3227423,3560277,68,44,High,14
+41,Metro Commercial Hub 41,Completed,3427109,3166757,100,0,Low,5
+42,Horizon Estate 42,Delayed,3009079,3458109,70,60,High,3
+43,City Business Park 43,Delayed,2520320,2703305,62,46,High,1
+44,Horizon Estate 44,Completed,2715167,2571415,100,1,Low,25
+45,Innovation Centre 45,Active,1188105,1343564,84,2,Medium,14
+46,Innovation Centre 46,Delayed,2633783,2930546,61,61,High,23
+47,Kingston Heights 47,Completed,2370785,2135680,100,1,Low,2
+48,Southbank Retail Park 48,Delayed,1724665,2194171,48,47,High,11
+49,Lakeside Apartments 49,Active,998863,1014690,70,9,Medium,3
+50,Northgate Offices 50,Active,1992785,2212233,51,12,Low,25
