@@ -149,6 +149,22 @@ elif selected_tab == "Project Tracking":
     fig = px.scatter(projects, x="Budget", y="Actual_Cost", color="Status", title="Budget vs Actual Cost")
     st.plotly_chart(fig)
 
+    st.subheader("Project Supplier Linkage")
+
+    project_supplier_view = projects[
+        [
+            "Project_ID",
+            "Project_Name",
+            "Status",
+            "Primary_Supplier",
+            "Primary_Supplier_Score",
+            "Primary_Supplier_Risk",
+            "Risk_Score"
+        ]
+    ].sort_values(by="Risk_Score", ascending=False)
+
+    st.dataframe(project_supplier_view, use_container_width=True)
+
 # Supplier Intelligence
 elif selected_tab == "Supplier Intelligence":
     st.subheader("Supplier Intelligence")
