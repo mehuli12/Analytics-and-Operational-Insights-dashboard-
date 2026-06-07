@@ -352,21 +352,41 @@ elif selected_tab == "Data Story":
     • High Risk
     """)
 
+
     st.header("Project Risk Methodology")
 
     st.write("""
-    Project Risk Score is calculated using:
+    Project Risk Score is calculated using a weighted operational risk model.
+    
+    The model combines four risk drivers:
+    
+    • Schedule Risk (40%)
+    • Issue Risk (30%)
+    • Completion Risk (20%)
+    • Cost Risk (10%)
+    
+    Each risk driver is normalized to a 0–100 scale before weighting.
+    
+    Schedule Risk:
+    Measures the impact of project delays.
 
-    • Delay Days
-    • Number of Open Issues
-    • Completion Percentage
-
-    Higher delays, more open issues, and lower completion rates increase
-    overall project risk.
-
-    The objective is to identify projects requiring intervention before
-    delays and cost overruns become critical.
+    Issue Risk:
+    Measures the impact of unresolved operational issues.
+    
+    Completion Risk:
+    Measures delivery risk based on remaining work.
+    
+    Cost Risk:
+    Measures budget overrun exposure.
+    
+    The final score is designed to prioritize management attention and
+    highlight projects requiring intervention.
+    
+    This is a heuristic decision-support model rather than a predictive
+    forecasting model.
     """)
+
+
 
     st.header("Decisions Supported")
 
