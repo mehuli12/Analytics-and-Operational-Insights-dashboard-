@@ -23,6 +23,27 @@ suppliers["Supplier_Score"] = (
     suppliers["Responsiveness_Score"] * 0.15
 ).round(1)
 
+# Link projects to their primary suppliers
+projects = projects.merge(
+    suppliers[
+        [
+            "Supplier_ID",
+            "Supplier_Name",
+            "Supplier_Score",
+            "Risk_Category"
+        ]
+    ],
+    left_on="Primary_Supplier_ID",
+    right_on="Supplier_ID",
+    how="left"
+)
+
+projects = projects.rename(columns={
+    "Supplier_Name": "Primary_Supplier",
+    "Supplier_Score": "Primary_Supplier_Score",
+    "Risk_Category": "Primary_Supplier_Risk"
+})
+
 # Calculate project risk score
 
 issue_counts = issues.groupby("Project_ID").size().reset_index(name="Open_Issues")
