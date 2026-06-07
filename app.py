@@ -229,6 +229,31 @@ elif selected_tab == "Operational Risk Insights":
             )
 
 
+    st.subheader("Root Cause Analysis")
+
+    top_risk_projects = high_risk_projects.head(5)
+
+    for _, project in top_risk_projects.iterrows():
+        project_issues = issues[issues["Project_ID"] == project["Project_ID"]]
+
+        root_causes = (
+            project_issues["Issue_Category"]
+            .value_counts()
+            .head(3)
+            .index
+            .tolist()
+        )
+
+        if len(root_causes) == 0:
+            root_causes = ["No major issue category recorded"]
+
+        st.markdown(f"### {project['Project_Name']}")
+        st.write(f"Risk Score: {project['Risk_Score']:.0f}/100")
+        st.write("Primary Drivers:")
+        for cause in root_causes:
+            st.write(f"- {cause}")
+
+
 
 
 # Data Story
