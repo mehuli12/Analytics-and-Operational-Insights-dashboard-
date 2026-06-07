@@ -262,11 +262,34 @@ elif selected_tab == "Operational Risk Insights":
         if len(root_causes) == 0:
             root_causes = ["No major issue category recorded"]
 
+
         st.markdown(f"### {project['Project_Name']}")
         st.write(f"Risk Score: {project['Risk_Score']:.0f}/100")
         st.write("Primary Drivers:")
         for cause in root_causes:
             st.write(f"- {cause}")
+
+        st.write("Recommended Actions:")
+
+        action_map = {
+            "Supplier Delay": "Review supplier performance and identify backup vendors.",
+            "Budget Overrun": "Conduct budget review and approve corrective actions.",
+            "Resource Constraint": "Reallocate resources or adjust project priorities.",
+            "Equipment Failure": "Escalate maintenance and equipment replacement planning.",
+            "Permit Delay": "Escalate approvals and engage relevant stakeholders.",
+            "Quality Issue": "Perform quality audit and implement corrective measures."
+        }
+
+        recommended_actions = []
+
+        for cause in root_causes:
+            if cause in action_map:
+                recommended_actions.append(action_map[cause])
+
+        for action in recommended_actions:
+            st.write(f"✓ {action}")
+
+        st.divider()
 
 
 
