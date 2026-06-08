@@ -14,9 +14,9 @@ The project demonstrates how operational data can be transformed into actionable
 
 ## 🚀 Live Demo
 
-Try the live Operational Intelligence Dashboard here:
+Explore the live Operational Intelligence Dashboard:
 
-[View Live Dashboard](https://operational-intelligence-dashboard-3wftctepdwa2f4zapmuyzx.streamlit.app/)
+[🔗 Launch Dashboard](https://operational-intelligence-dashboard-3wftctepdwa2f4zapmuyzx.streamlit.app/)
 
 ## Dashboard Highlights
 
