@@ -18,6 +18,15 @@ Explore the live Operational Intelligence Dashboard:
 
 [🔗 Launch Dashboard](https://operational-intelligence-dashboard-3wftctepdwa2f4zapmuyzx.streamlit.app/)
 
+## Key Metrics
+
+- 50 Simulated Infrastructure Projects
+- 30 Suppliers Evaluated
+- 150+ Operational Issues Analysed
+- Multi-Factor Risk Scoring Engine
+- Root Cause Analysis Framework
+- Operational Escalation Decision Engine
+
 ## Dashboard Highlights
 
 ### Executive Overview
