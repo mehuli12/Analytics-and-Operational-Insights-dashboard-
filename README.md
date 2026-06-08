@@ -12,11 +12,18 @@ Rather than focusing solely on reporting metrics, the dashboard combines project
 
 The project demonstrates how operational data can be transformed into actionable insights that support prioritization and resource allocation.
 
+## Why I Built This
+
+During my experience working on operational and project-focused initiatives, I noticed that teams often have access to large amounts of data but still struggle to decide where to focus their attention. A delayed project, an underperforming supplier, or a growing backlog of operational issues may all appear in separate reports, making it difficult to understand overall delivery risk.
+
+I built this project to explore how project data, supplier performance, and operational issues could be combined into a single decision-support system. Rather than simply displaying metrics, the dashboard prioritizes risks, highlights root causes, and recommends actions that could help teams intervene earlier.
+
 ## 🚀 Live Demo
 
 Explore the live Operational Intelligence Dashboard:
 
 [🔗 Launch Dashboard](https://operational-intelligence-dashboard-3wftctepdwa2f4zapmuyzx.streamlit.app/)
+
 
 ## Key Metrics
 
@@ -26,6 +33,31 @@ Explore the live Operational Intelligence Dashboard:
 - Multi-Factor Risk Scoring Engine
 - Root Cause Analysis Framework
 - Operational Escalation Decision Engine
+
+## System Architecture
+
+```mermaid
+flowchart TD
+    A[projects.csv] --> D[Data Processing Layer]
+    B[suppliers.csv] --> D
+    C[issues.csv] --> D
+
+    D --> E[Supplier Scoring Engine]
+    D --> F[Project Risk Engine]
+    D --> G[Issue Analysis]
+
+    E --> H[Project-Supplier Linkage]
+    F --> H
+    G --> I[Root Cause Analysis]
+
+    H --> J[Operational Alerts]
+    I --> K[Recommended Actions]
+    J --> L[Escalation Decision Engine]
+    K --> L
+
+    L --> M[Streamlit Dashboard]
+```
+
 
 ## Dashboard Highlights
 
@@ -163,31 +195,6 @@ The final risk score combines:
 Scores are normalized and capped to improve interpretability.
 
 The objective is prioritization rather than prediction.
-
-
-## System Architecture
-
-```mermaid
-flowchart TD
-    A[projects.csv] --> D[Data Processing Layer]
-    B[suppliers.csv] --> D
-    C[issues.csv] --> D
-
-    D --> E[Supplier Scoring Engine]
-    D --> F[Project Risk Engine]
-    D --> G[Issue Analysis]
-
-    E --> H[Project-Supplier Linkage]
-    F --> H
-    G --> I[Root Cause Analysis]
-
-    H --> J[Operational Alerts]
-    I --> K[Recommended Actions]
-    J --> L[Escalation Decision Engine]
-    K --> L
-
-    L --> M[Streamlit Dashboard]
-```
 
 
 ## Technology Stack
