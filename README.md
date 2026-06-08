@@ -1,5 +1,9 @@
 # Operational Intelligence Dashboard
 
+A Python-based operational decision-support platform that analyzes project delivery risk, supplier performance, operational incidents, and escalation workflows across a portfolio of infrastructure projects.
+
+Built using Python, Pandas, Plotly, and Streamlit.
+
 ## Overview
 
 The Operational Intelligence Dashboard is a decision-support platform designed to help operations teams monitor project delivery performance, supplier reliability, operational risks, and issue escalation across a portfolio of infrastructure projects.
@@ -7,6 +11,32 @@ The Operational Intelligence Dashboard is a decision-support platform designed t
 Rather than focusing solely on reporting metrics, the dashboard combines project data, supplier performance data, and operational issue tracking to identify risks, explain root causes, and recommend corrective actions.
 
 The project demonstrates how operational data can be transformed into actionable insights that support prioritization and resource allocation.
+
+## 🚀 Live Demo
+
+Try the live Operational Intelligence Dashboard here:
+
+[View Live Dashboard](https://operational-intelligence-dashboard-3wftctepdwa2f4zapmuyzx.streamlit.app/)
+
+## Dashboard Highlights
+
+### Executive Overview
+
+<img width="716" height="613" alt="executive overview1" src="https://github.com/user-attachments/assets/509fe55a-7592-4300-b265-a36245a46443" />
+<img width="1511" height="213" alt="Screenshot 2026-06-08 at 10 01 14 AM" src="https://github.com/user-attachments/assets/275705e7-1c52-408f-bde0-79b70e8a3a17" />
+
+## Supplier Intelligence
+
+<img width="624" height="788" alt="supplier intelligence" src="https://github.com/user-attachments/assets/6ea2f976-35fa-4b91-af38-6eb90b580965" />
+
+
+## Operational Risk Insights
+
+<img width="599" height="776" alt="operational risk insights" src="https://github.com/user-attachments/assets/71ebc39a-3539-41da-bab2-af57b17b3aef" />
+
+### Root Cause Analysis & Escalation Engine
+
+<img width="616" height="783" alt="Screenshot 2026-06-08 at 10 05 57 AM" src="https://github.com/user-attachments/assets/5bbd7db0-cddc-42ab-b851-67fda2049648" />
 
 
 ## Business Problem
