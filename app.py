@@ -302,6 +302,14 @@ elif selected_tab == "Operational Risk Insights":
 
         st.markdown(f"### {project['Project_Name']}")
         st.write(f"Risk Score: {project['Risk_Score']:.0f}/100")
+        
+        st.write("Risk Breakdown:")
+        st.write(f"- Schedule Risk: {project['Schedule_Risk']:.0f}/100")
+        st.write(f"- Issue Risk: {project['Issue_Risk']:.0f}/100")
+        st.write(f"- Completion Risk: {project['Completion_Risk']:.0f}/100")
+        st.write(f"- Cost Risk: {project['Cost_Risk']:.0f}/100")
+
+        
         st.write("Primary Drivers:")
         for cause in root_causes:
             st.write(f"- {cause}")
