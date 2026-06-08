@@ -334,6 +334,33 @@ elif selected_tab == "Operational Risk Insights":
         for action in recommended_actions:
             st.write(f"✓ {action}")
 
+        
+        st.write("Escalation Decision:")
+
+        if project["Risk_Score"] >= 80:
+            escalation = "Executive Escalation"
+            reason = "Project risk exceeds the critical threshold."
+
+        elif project["Primary_Supplier_Risk"] == "High Risk":
+            escalation = "Supplier Performance Review"
+            reason = "The assigned supplier is classified as high risk."
+
+        elif project["Delay_Days"] > 30:
+            escalation = "Schedule Recovery Plan"
+            reason = "Project delivery timeline is significantly behind schedule."
+
+        elif project["Open_Issues"] > 5:
+            escalation = "Issue Resolution Task Force"
+            reason = "Multiple unresolved issues require coordinated resolution."
+
+        else:
+            escalation = "Monitor"
+            reason = "Project does not currently meet escalation thresholds."
+
+        st.write(f"**Decision:** {escalation}")
+        st.write(f"**Reason:** {reason}")
+
+
         st.divider()
 
 
