@@ -144,6 +144,29 @@ Escalation Decisions
 ↓
 Operational Dashboard
 
+## System Architecture
+
+```mermaid
+flowchart TD
+    A[projects.csv] --> D[Data Processing Layer]
+    B[suppliers.csv] --> D
+    C[issues.csv] --> D
+
+    D --> E[Supplier Scoring Engine]
+    D --> F[Project Risk Engine]
+    D --> G[Issue Analysis]
+
+    E --> H[Project-Supplier Linkage]
+    F --> H
+    G --> I[Root Cause Analysis]
+
+    H --> J[Operational Alerts]
+    I --> K[Recommended Actions]
+    J --> L[Escalation Decision Engine]
+    K --> L
+
+    L --> M[Streamlit Dashboard]
+
 
 ## Technology Stack
 
