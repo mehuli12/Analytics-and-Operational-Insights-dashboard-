@@ -128,24 +128,6 @@ The objective is prioritization rather than prediction.
 
 ## System Architecture
 
-Projects Data
-↓
-Supplier Data
-↓
-Operational Issues
-↓
-Risk Engine
-↓
-Root Cause Analysis
-↓
-Recommended Actions
-↓
-Escalation Decisions
-↓
-Operational Dashboard
-
-## System Architecture
-
 ```mermaid
 flowchart TD
     A[projects.csv] --> D[Data Processing Layer]
