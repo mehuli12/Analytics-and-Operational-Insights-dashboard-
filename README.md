@@ -8,7 +8,6 @@ Rather than focusing solely on reporting metrics, the dashboard combines project
 
 The project demonstrates how operational data can be transformed into actionable insights that support prioritization and resource allocation.
 
----
 
 ## Business Problem
 
@@ -26,7 +25,6 @@ Without a centralized view, teams often react to problems after delays and cost 
 
 This dashboard was built to address that challenge.
 
----
 
 ## Key Features
 
@@ -93,7 +91,6 @@ Examples include:
 
 Each recommendation includes an explanation of why the action was generated.
 
----
 
 ## Risk Methodology
 
@@ -128,7 +125,6 @@ Scores are normalized and capped to improve interpretability.
 
 The objective is prioritization rather than prediction.
 
----
 
 ## System Architecture
 
@@ -148,7 +144,6 @@ Escalation Decisions
 ↓
 Operational Dashboard
 
----
 
 ## Technology Stack
 
@@ -158,7 +153,6 @@ Operational Dashboard
 * Plotly
 * Streamlit
 
----
 
 ## Dataset
 
@@ -172,7 +166,6 @@ The dataset includes:
 
 No confidential company data has been used.
 
----
 
 ## Limitations
 
@@ -188,7 +181,6 @@ In production environments, additional factors such as:
 
 would be incorporated into the decision-making process.
 
----
 
 ## Future Improvements
 
@@ -200,7 +192,7 @@ Potential future enhancements include:
 * Interactive Scenario Analysis
 * Workflow Integration with Operational Systems
 
----
+
 
 ## Author
 
